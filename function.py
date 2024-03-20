@@ -33,8 +33,8 @@ contraintes = [
     Contrainte.Contrainte(variables,constantesContraintes[2],">=",0),
     Contrainte.Contrainte(variables,constantesContraintes[3],">=",0),
 ]
-# prob = getSolution(variables,constantes,contraintes)
-# print("Status de la résolution après :",LpStatus[prob.status])
-# print("Valeur optimale de la fonction objective :",prob.objective.value())
-# print("x : ", prob.variables()[0].value())
-# print("y : ", prob.variables()[1].value())
+prob = getSolution(variables,constantes,contraintes)
+print("Status de la résolution après :",LpStatus[prob.status])
+print("Valeur optimale de la fonction objective :",prob.objective.value())
+print("x : ", prob.variables()[0].value())
+print("y : ", prob.variables()[1].value())

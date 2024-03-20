@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import Contrainte
 import function
+import Result
 
 class FormulaireContrainte(tk.Tk):
     def __init__(self, variables, constantes):
@@ -61,6 +62,7 @@ class FormulaireContrainte(tk.Tk):
         print("Valeur optimale de la fonction objective :",prob.objective.value())
         print("x : ", prob.variables()[0].value())
         print("y : ", prob.variables()[1].value())
+        window = Result.Result(prob,self.variables)
             
         # for i, contrainte in enumerate(self.contrainte_entries):
         #     contrainte_values = [entry.get() for entry in contrainte]
