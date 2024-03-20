@@ -57,7 +57,7 @@ class FormulaireContrainte(tk.Tk):
                 constantes.append(int(self.contrainte_entries[i][j].get()))
             contrainte = Contrainte.Contrainte(self.variables,constantes,self.inegalite_comboboxes,self.disponible_entries[i])
             contraintes.append(contrainte)
-        prob = getSolution(self.variables,self.constantesFonctionObj,contraintes)
+        prob = function.getSolution(self.variables,self.constantesFonctionObj,contraintes)
         print("Status de la résolution après :",LpStatus[prob.status])
         print("Valeur optimale de la fonction objective :",prob.objective.value())
         print("x : ", prob.variables()[0].value())

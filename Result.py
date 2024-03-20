@@ -1,5 +1,7 @@
 from pulp import LpProblem,LpVariable,LpStatus,LpMaximize,LpMinimize
-
+from pulp import LpProblem, LpVariable, LpStatus, LpMaximize, LpMinimize
+import tkinter as tk
+import function
 class Result(tk.Tk):
     def __init__(self, prob, variables):
         super().__init__()
